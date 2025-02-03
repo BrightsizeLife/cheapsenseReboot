@@ -1,134 +1,103 @@
-/* ===================================
-   BASIC GLOBAL / RESET
-=================================== */
+/* =============================
+   RESET & GLOBAL
+============================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===================================
-   ROOT VARIABLES (optional)
-=================================== */
 :root {
   --background-color: #ffffff;
-  --text-color: #60665f; /* the grey-ish text color from Polis screenshot */
+  --text-color: #60665f;
   --link-color: #007BFF;
-  --font-main: 'Space Mono', monospace; /* or another monospace if you prefer */
+  --font-main: 'Space Mono', monospace;
 }
 
-/* ===================================
-   BODY
-=================================== */
+/* Body / Base Typography */
 body {
-  margin: 0;
-  padding: 0;
   background: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-main);
   line-height: 1.5;
+  font-size: 16px; /* Base font size; tweak as needed */
 }
 
-/* ===================================
-   MAIN CONTAINER - to center content
-=================================== */
+/* Center the main content */
 main {
-  max-width: 800px;
+  max-width: 750px; /* or 700 / 800 as you prefer */
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* ===================================
-   HEADER / BANNER
-=================================== */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* =============================
+   HEADINGS
+============================= */
 .site-title {
-  font-size: 3.5rem; /* Big “title” */
+  /* The site banner's top heading */
+  font-size: 3.5rem;
   font-weight: 400;
   margin: 1rem 0;
+  text-align: center;
 }
 
-/* Optional: If you want the .site-title darker or a different color
-.site-title {
-  color: #333;
-  ...
+h1 {
+  font-size: 2.5rem; /* Distinctly big but smaller than .site-title */
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
 }
-*/
 
-/* ===================================
-   ALBUM ART
-=================================== */
+h2 {
+  font-size: 1.125rem; /* Slightly larger than body (16px -> 18px) */
+  font-weight: 700; /* Bold for emphasis */
+  margin: 1rem 0 0.5rem;
+}
+
+/* =============================
+   NAV / TOP-RIGHT LINK
+============================= */
+.top-right-nav {
+  text-align: right;
+  padding: 1rem;
+}
+
+/* =============================
+   IMAGES
+============================= */
 .album-art {
   max-width: 300px;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* center the album cover as well */
 }
 
-/* ===================================
-   HEADINGS
-   - Keep H1 bigger than H2
-=================================== */
-h1 {
-  font-size: 2.5rem; 
-  margin: 1rem 0 0.5rem;
-  font-weight: 400;
-  /* line-height: 1.2; optional if you like tighter spacing */
+img {
+  vertical-align: middle; 
+  margin-right: 0.5rem;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0 0.5rem;
-  font-weight: 400;
-}
-
-/* If you want an even bigger difference:
-h2 {
-  font-size: 1.25rem;
-}
-*/
-
-/* ===================================
-   SECTIONS
-=================================== */
-section {
-  margin-bottom: 2rem;
-}
-
-/* ===================================
+/* =============================
    LISTS
-=================================== */
+============================= */
 ul {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
   margin: 0 0 1rem;
+  padding: 0;
 }
 
 li {
   margin: 0.5rem 0;
-  /* If you want slight indentation or different spacing:
-     padding-left: 1rem;
-  */
 }
 
-/* ===================================
-   IMAGES (icons, etc.)
-=================================== */
-img {
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-
-/* ===================================
+/* =============================
    LINKS
-=================================== */
+============================= */
 a {
-  text-decoration: none;
   color: var(--link-color);
+  text-decoration: none;
 }
 
 a:hover {
