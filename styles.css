@@ -1,86 +1,136 @@
-/* Global resets and defaults */
+/* ===================================
+   BASIC GLOBAL / RESET
+=================================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Use Space Mono throughout */
+/* ===================================
+   ROOT VARIABLES (optional)
+=================================== */
+:root {
+  --background-color: #ffffff;
+  --text-color: #60665f; /* the grey-ish text color from Polis screenshot */
+  --link-color: #007BFF;
+  --font-main: 'Space Mono', monospace; /* or another monospace if you prefer */
+}
+
+/* ===================================
+   BODY
+=================================== */
 body {
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
   line-height: 1.5;
-  color: #60665f; /* or your chosen text color */
-  background-color: #fff; /* or your chosen background color */
-  padding: 1rem;
 }
 
-/* Keep the header simple, with sign-in on top right */
-.site-header {
-  display: flex;
-  justify-content: flex-end;
+/* ===================================
+   MAIN CONTAINER - to center content
+=================================== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ===================================
+   HEADER / BANNER
+=================================== */
+header {
+  text-align: center;
   margin-bottom: 2rem;
 }
 
-.site-header nav ul {
-  list-style: none;
-}
-
-.site-header nav ul li {
-  display: inline-block;
-  margin-left: 1rem;
-}
-
-.site-header nav a {
-  text-decoration: none;
-  color: #60665f;
+.site-title {
+  font-size: 3.5rem; /* Big “title” */
   font-weight: 400;
+  margin: 1rem 0;
 }
 
-.site-header nav a:hover {
-  text-decoration: underline;
+/* Optional: If you want the .site-title darker or a different color
+.site-title {
+  color: #333;
+  ...
 }
+*/
 
-/* Hero section styles */
-.hero {
-  max-width: 600px;
-  margin-bottom: 3rem;
-}
-
-/* Big bold heading for the hero */
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 400; /* or 700 if you want it bolder */
-  line-height: 1.2;
-}
-
-/* Sub‐header or subtitle styling */
-.hero .subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #60665f; /* slightly different shade or keep same */
-}
-
-/* Content blocks styling */
-.content-block {
-  max-width: 600px;
+/* ===================================
+   ALBUM ART
+=================================== */
+.album-art {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
   margin-bottom: 2rem;
 }
 
-.content-block h2 {
+/* ===================================
+   HEADINGS
+   - Keep H1 bigger than H2
+=================================== */
+h1 {
+  font-size: 2.5rem; 
+  margin: 1rem 0 0.5rem;
+  font-weight: 400;
+  /* line-height: 1.2; optional if you like tighter spacing */
+}
+
+h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.5rem;
   font-weight: 400;
 }
 
-/* Link styling for the body text */
-.content-block a {
+/* If you want an even bigger difference:
+h2 {
+  font-size: 1.25rem;
+}
+*/
+
+/* ===================================
+   SECTIONS
+=================================== */
+section {
+  margin-bottom: 2rem;
+}
+
+/* ===================================
+   LISTS
+=================================== */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+}
+
+li {
+  margin: 0.5rem 0;
+  /* If you want slight indentation or different spacing:
+     padding-left: 1rem;
+  */
+}
+
+/* ===================================
+   IMAGES (icons, etc.)
+=================================== */
+img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* ===================================
+   LINKS
+=================================== */
+a {
   text-decoration: none;
-  color: #007BFF; /* placeholder link color */
-  font-weight: 400;
+  color: var(--link-color);
 }
 
-.content-block a:hover {
+a:hover {
   text-decoration: underline;
 }
