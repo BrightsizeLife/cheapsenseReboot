@@ -80,7 +80,7 @@ img {
 }
 
 .icon {
-  width: 24px;
+  max-width: 24px;
   height: auto; /* keeps original proportions */
   vertical-align: middle; /* so the icon lines up nicely with text */
   margin-right: 0.5rem;   /* add a little space after the icon */
