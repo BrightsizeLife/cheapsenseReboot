@@ -30,6 +30,14 @@ main {
   padding: 2rem;
 }
 
+/* Keep the main header visible while scrolling */
+.main-header {
+  position: sticky;
+  top: 0;
+  background: var(--background-color);
+  z-index: 1000;
+}
+
 /* =============================
    HEADINGS
 ============================= */
